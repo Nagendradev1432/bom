@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="form">
+            <label>Name:</label>
+            <input type="text" id="ip1">
+            <br><br><label>Age:</label>
+            <input type="text" id="ip2">
+            <br><br><label>phone Number:</label>
+            <input type="text"  id="ip3">
+           <br><br><label>email id:</label>
+           <input type="text" id="ip4">
+           <br><br><input type="submit" name="" id="sub1">
+        </form>
+    </div>
+    <script>
+        let form=document.getElementById("form")
+        let ip1=document.getElementById("ip1")
+        let ip2=document.getElementById("ip2")
+        let ip3=document.getElementById("ip3")
+        let ip4=document.getElementById("ip4")
+        let sub1=document.getElementById("sub1")
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            localStorage.setItem("Name",ip1.value)
+            localStorage.setItem("Age",ip2.value)
+            localStorage.setItem("phone Number",ip3.value)
+            localStorage.setItem("email id",ip4.value)
+
+            localStorage.clear()
+        })
+    </script>
+</body>
+</html>
